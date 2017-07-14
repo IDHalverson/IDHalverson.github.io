@@ -1,12 +1,78 @@
-html * {
+@import url("https://fonts.googleapis.com/css?family=Fredericka+the+Great|Raleway");
+html {
+  background: black;
   margin: 0;
   padding: 0;
-  font-family: Helvetica, sans-serif; }
+  font-family: Helvetica, sans-serif;
+  color: white;
+  letter-spacing: 3px; }
 
-html {
-  background-image: url("personal_website3.jpg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: top; }
+html .section {
+  width: 1400px;
+  margin: 0 auto;
+  overflow: hidden;
+  margin-bottom: 50px; }
+  html .section .center {
+    background: #127582;
+    margin: 0 auto;
+    width: 1200px;
+    border: 3px solid white;
+    text-align: center;
+    padding: 40px; }
+html #main-title {
+  height: 700px;
+  background-image: url("personal_website4.jpg");
+  background-size: cover;
+  border: 3px solid white; }
+  html #main-title #title-container {
+    float: right;
+    text-align: center;
+    height: 500px;
+    width: 900px;
+    margin-top: 100px; }
+    html #main-title #title-container h1 {
+      color: white;
+      font-size: 80px;
+      font-family: "Raleway"; }
+    html #main-title #title-container h2 {
+      font-size: 50px;
+      color: white;
+      font-family: "Raleway"; }
+    html #main-title #title-container #bar {
+      height: 6px;
+      width: 200px;
+      background: #127582;
+      border-radius: 4px;
+      margin: 20px auto 0 auto; }
+    html #main-title #title-container h3 {
+      color: white;
+      margin-top: 50px;
+      font-family: "Raleway"; }
+    html #main-title #title-container #contact-links {
+      margin: 0 auto;
+      width: 304px; }
+      html #main-title #title-container #contact-links .contact-link {
+        margin: 0 8px;
+        float: left;
+        width: 60px;
+        height: 60px;
+        background: #127582;
+        border-radius: 50%; }
+html #about-me h2 {
+  font-size: 50px;
+  font-family: "Raleway"; }
+html #portfolio h2 {
+  font-size: 50px;
+  font-family: "Raleway"; }
+html #portfolio .showcase {
+  float: left;
+  background: black;
+  border: 3px solid white;
+  width: 294px;
+  height: 400px;
+  margin: 50px; }
+html #contact-info h2 {
+  font-size: 50px;
+  font-family: "Raleway"; }
 
 /*# sourceMappingURL=styles.css.map */

@@ -1,13 +1,107 @@
+@import url('https://fonts.googleapis.com/css?family=Fredericka+the+Great|Raleway');
 
-html * {
+html {
+  background: black;
   margin: 0;
   padding: 0;
   font-family: Helvetica, sans-serif;
+  color: white;
+  letter-spacing: 3px;
 }
 
 html {
-  background-image: image("personal_website3.jpg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: top;
+  .section {
+    width: 1400px;
+    margin: 0 auto;
+    overflow: hidden;
+    margin-bottom: 50px;
+    .center {
+      background: #127582;
+      margin: 0 auto;
+      width: 1200px;
+      border: 3px solid white;
+      text-align: center;
+      padding: 40px;
+    }
+  }
+  #main-title {
+    height: 700px;
+    background-image: url("personal_website4.jpg");
+    background-size: cover;
+    border: 3px solid white;
+    #title-container {
+      float: right;
+      text-align: center;
+      height: 500px;
+      width: 900px;
+      margin-top: 100px;
+      h1 {
+        color: white;
+        font-size: 80px;
+        font-family: "Raleway";
+      }
+      h2 {
+        font-size: 50px;
+        color: white;
+        font-family: "Raleway";
+      }
+      #bar {
+        height: 6px;
+        width: 200px;
+        background: #127582;
+        border-radius: 4px;
+        margin: 20px auto 0 auto;
+      }
+      h3 {
+        color: white;
+        margin-top: 50px;
+        font-family: "Raleway";
+      }
+      #contact-links {
+        margin: 0 auto;
+        width: 304px;
+        .contact-link {
+          margin: 0 8px;
+          float: left;
+          width: 60px;
+          height: 60px;
+          background: #127582;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+  #about-me {
+
+    h2 {
+      font-size: 50px;
+      font-family: "Raleway";
+    }
+    p {
+
+    }
+  }
+  #portfolio {
+    h2 {
+      font-size: 50px;
+      font-family: "Raleway";
+    }
+    .showcase {
+      float: left;
+      background: black;
+      border: 3px solid white;
+      width: 294px;
+      height: 400px;
+      margin: 50px;
+    }
+  }
+  #contact-info {
+    h2 {
+      font-size: 50px;
+      font-family: "Raleway";
+    }
+    p {
+
+    }
+  }
 }
