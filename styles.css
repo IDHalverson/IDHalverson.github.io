@@ -21,7 +21,6 @@ html .section {
     padding: 40px; }
 html #main-title {
   height: 700px;
-  background-image: url("personal_website4.jpg");
   background-size: cover;
   border: 3px solid white; }
   html #main-title #title-container {
