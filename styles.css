@@ -74,7 +74,7 @@ html {
           box-shadow: -3px 1px 8px black; }
         html #main-title #title-container #contact-links #github {
           background-image: url("GitHub.png");
-          background-size: 62px 62px;
+          background-size: 63px 63px;
           background-position: center; }
         html #main-title #title-container #contact-links #linkedin {
           background-image: url("LinkedIn.png");
@@ -86,7 +86,8 @@ html {
           background-position: center; }
         html #main-title #title-container #contact-links #email {
           background-image: url("email.png");
-          background-size: cover; }
+          background-size: 62px 62px;
+          background-position: center; }
   html #about-me h2 {
     font-size: 70px; }
   html #about-me p {
