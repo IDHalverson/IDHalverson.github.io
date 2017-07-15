@@ -5,7 +5,7 @@ html * {
   font-family: "Montserrat", Helvetica, sans-serif;
   color: white;
   letter-spacing: -1.3px;
-  word-spacing: 18px;
+  word-spacing: 12px;
   text-shadow: -1px 1px 12px #00515C;
   -webkit-font-smoothing: antialiased; }
 
@@ -73,19 +73,19 @@ html {
           border-radius: 50%;
           box-shadow: -3px 1px 8px black; }
         html #main-title #title-container #contact-links #github {
-          background-image: url("GitHub.png");
+          background-image: url("images/GitHub.png");
           background-size: 63px 63px;
           background-position: center; }
         html #main-title #title-container #contact-links #linkedin {
-          background-image: url("LinkedIn.png");
+          background-image: url("images/LinkedIn.png");
           background-size: 60px 60px;
           background-position: center; }
         html #main-title #title-container #contact-links #twitter {
-          background-image: url("Twitter.png");
+          background-image: url("images/Twitter.png");
           background-size: 53px 53px;
           background-position: center; }
         html #main-title #title-container #contact-links #email {
-          background-image: url("email.png");
+          background-image: url("images/email.png");
           background-size: 62px 62px;
           background-position: center; }
   html #about-me h2 {
@@ -98,13 +98,50 @@ html {
     font-size: 70px; }
   html #portfolio .showcase {
     float: left;
-    background: #A84900;
-    border: 3px solid white;
-    width: 294px;
-    height: 400px;
-    margin: 68px; }
-  html #contact-info h2 {
-    font-size: 70px; }
+    background: #00515C;
+    border: 3px solid #BDBBB6;
+    width: 444px;
+    height: 700px;
+    margin: 100px; }
+    html #portfolio .showcase h6 {
+      margin: 20px 10px 0 10px;
+      font-size: 30px;
+      word-spacing: normal;
+      text-shadow: -1px 1px 12px black; }
+    html #portfolio .showcase img {
+      width: 90%;
+      border: 2px solid #BDBBB6;
+      margin: 25px auto; }
+    html #portfolio .showcase .showcase-info {
+      width: 90%;
+      margin: 0 auto; }
+      html #portfolio .showcase .showcase-info button {
+        width: 80px;
+        height: 40px;
+        background: #ffffff;
+        background-color: #1FB244;
+        font-size: 18px;
+        margin-bottom: 20px; }
+      html #portfolio .showcase .showcase-info button:hover {
+        background-color: #1A9137; }
+      html #portfolio .showcase .showcase-info p {
+        word-spacing: 6px;
+        font-size: 24px; }
+  html #contact-info {
+    margin-bottom: 100px; }
+    html #contact-info h2 {
+      font-size: 70px; }
+    html #contact-info a {
+      display: block;
+      font-size: 40px;
+      text-decoration: none;
+      margin: 20px 0 0 0; }
+    html #contact-info a:hover {
+      text-decoration: underline; }
+    html #contact-info h6 {
+      font-weight: normal;
+      font-size: 40px;
+      margin: 40px 0; }
 
 @media only screen and (max-width: 1024px) {
   html .section {
@@ -121,6 +158,6 @@ html {
       width: 700px;
       margin-left: 0; }
   html #portfolio .showcase {
-    margin: 50px 150px; } }
+    margin: 50px 75px; } }
 
 /*# sourceMappingURL=styles.css.map */
