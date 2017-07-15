@@ -1,72 +1,106 @@
-@import url('https://fonts.googleapis.com/css?family=Fredericka+the+Great|Raleway');
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
 
-html {
-  background: black;
+html * {
   margin: 0;
   padding: 0;
-  font-family: Helvetica, sans-serif;
+  font-family: "Montserrat", Helvetica, sans-serif;
   color: white;
-  letter-spacing: 3px;
+  letter-spacing: -1.3px;
+  word-spacing: 18px;
+  text-shadow: -1px 1px 12px #00515C;
+  -webkit-font-smoothing: antialiased;
 }
 
 html {
+  background: #00515C;
   .section {
+    box-shadow: -3px 1px 8px black;
+    background: rgba(255, 255, 255, .25);
     width: 1400px;
-    margin: 0 auto;
+    margin: 20px auto 0 auto;
     overflow: hidden;
-    margin-bottom: 50px;
+    margin-bottom: 10px;
     .center {
-      background: #127582;
       margin: 0 auto;
-      width: 1200px;
-      border: 3px solid white;
+      width: 1310px;
       text-align: center;
       padding: 40px;
     }
+    .bar {
+      height: 6px;
+      width: 200px;
+      background: #BDBBB6;
+      border-radius: 4px;
+      margin: 50px auto 50px auto;
+      box-shadow: -1px 1px 12px #00515C;
+    }
   }
   #main-title {
-    height: 700px;
-    background-image: url("personal_website4.jpg");
-    background-size: cover;
-    border: 3px solid white;
+    height: 500px;
+    padding: 100px 0;
+    #frame {
+      box-shadow: -1px 1px 4px black;
+      float: left;
+      margin: 100px 0 0 120px;
+      background: lightgrey;
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      padding: 10px;
+      border: 10px solid #A3A29D;
+      img {
+        width: 250px;
+        height: 250px;
+      }
+    }
     #title-container {
-      float: right;
       text-align: center;
       height: 500px;
       width: 900px;
-      margin-top: 100px;
+      margin: 0 0 0 400px;
       h1 {
-        color: white;
+        letter-spacing: -2px;
         font-size: 80px;
-        font-family: "Raleway";
+        margin: 20px 0;
       }
       h2 {
+        letter-spacing: -2px;
         font-size: 50px;
-        color: white;
-        font-family: "Raleway";
-      }
-      #bar {
-        height: 6px;
-        width: 200px;
-        background: #127582;
-        border-radius: 4px;
-        margin: 20px auto 0 auto;
+        margin: 20px 0;
       }
       h3 {
-        color: white;
-        margin-top: 50px;
-        font-family: "Raleway";
+        font-size: 25px;
       }
       #contact-links {
-        margin: 0 auto;
+        margin: 50px auto;
         width: 304px;
         .contact-link {
           margin: 0 8px;
           float: left;
           width: 60px;
           height: 60px;
-          background: #127582;
+          background: white;
           border-radius: 50%;
+          box-shadow: -3px 1px 8px black;
+        }
+        #github {
+          background-image: url("GitHub.png");
+          background-size: 62px 62px;
+          background-position: center;
+        }
+        #linkedin {
+          background-image: url("LinkedIn.png");
+          background-size: 69px 69px;
+          background-position: center;
+        }
+        #twitter {
+          background-image: url("Twitter.png");
+          background-size: 53px 53px;
+          background-position: center;
+        }
+        #email {
+          background-image: url("email.png");
+          background-size: cover;
         }
       }
     }
@@ -74,21 +108,21 @@ html {
   #about-me {
 
     h2 {
-      font-size: 50px;
-      font-family: "Raleway";
+      font-size: 70px;
     }
     p {
-
+      font-size: 25px;
+      margin: 0 40px 40px 40px;
+      line-height: 40px;
     }
   }
   #portfolio {
     h2 {
-      font-size: 50px;
-      font-family: "Raleway";
+      font-size: 70px;
     }
     .showcase {
       float: left;
-      background: black;
+      background: #A84900;
       border: 3px solid white;
       width: 294px;
       height: 400px;
@@ -97,8 +131,7 @@ html {
   }
   #contact-info {
     h2 {
-      font-size: 50px;
-      font-family: "Raleway";
+      font-size: 70px;
     }
     p {
 
