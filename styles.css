@@ -102,8 +102,25 @@ html {
     border: 3px solid white;
     width: 294px;
     height: 400px;
-    margin: 50px; }
+    margin: 68px; }
   html #contact-info h2 {
     font-size: 70px; }
+
+@media only screen and (max-width: 1024px) {
+  html .section {
+    width: 700px; }
+    html .section .center {
+      width: 600px; }
+  html #main-title {
+    height: 800px;
+    padding: 50px 0; }
+    html #main-title #frame {
+      float: none;
+      margin: 0 auto; }
+    html #main-title #title-container {
+      width: 700px;
+      margin-left: 0; }
+  html #portfolio .showcase {
+    margin: 50px 150px; } }
 
 /*# sourceMappingURL=styles.css.map */

@@ -127,7 +127,7 @@ html {
       border: 3px solid white;
       width: 294px;
       height: 400px;
-      margin: 50px;
+      margin: 68px;
     }
   }
   #contact-info {
@@ -138,4 +138,36 @@ html {
 
     }
   }
+}
+
+
+
+@media only screen and (max-width: 1024px) {
+
+  html {
+    .section {
+      width: 700px;
+      .center {
+        width: 600px;
+      }
+    }
+    #main-title {
+      height: 800px;
+      padding: 50px 0;
+      #frame {
+        float: none;
+        margin: 0 auto;
+      }
+      #title-container {
+        width: 700px;
+        margin-left: 0;
+          }
+        }
+    #portfolio {
+      .showcase {
+        margin: 50px 150px;
+      }
+    }
+  }
+
 }
