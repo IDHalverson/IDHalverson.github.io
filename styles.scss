@@ -13,6 +13,65 @@ html * {
 
 html {
   background: #00515C;
+  .active {
+    display: block !important;
+  }
+  .arrow {
+    position: fixed;
+    top: 300px;
+    width: 75px;
+    height: 75px;
+    background: rgba(255, 255, 255, .2);
+    border-radius: 50%;
+    img {
+      width: 65%;
+      position: absolute;
+      top: 17%;
+    }
+  }
+  .arrow:hover {
+    background: rgba(255, 255, 255, .6);
+  }
+  #arrow-left {
+    left: 30px;
+    img {
+      left: 11%;
+    }
+  }
+  #arrow-right {
+    right: 30px;
+    img {
+      right: 11%;
+    }
+  }
+  .arrow-bottom {
+    position: fixed;
+    width: 75px;
+    height: 75px;
+    background: rgba(255, 255, 255, .2);
+    border-radius: 50%;
+    top: 630px;
+    left: 45%;
+    img {
+      left: 17%;
+      width: 65%;
+      position: absolute;
+    }
+  }
+  .arrow-bottom:hover {
+    background: rgba(255, 255, 255, .6);
+  }
+  #arrow-scroll {
+    img {
+      top: 20%;
+    }
+  }
+  #arrow-conceal {
+    display: none;
+    img {
+      top: 13%;
+    }
+  }
   .section {
     box-shadow: -3px 1px 8px black;
     background: rgba(255, 255, 255, .25);
@@ -36,6 +95,7 @@ html {
     }
   }
   #main-title {
+    display: none;
     height: 500px;
     padding: 100px 0;
     #frame {
@@ -83,6 +143,12 @@ html {
           border-radius: 50%;
           box-shadow: -3px 1px 8px black;
         }
+        .contact-link:hover {
+          position: relative;
+          bottom: 7px;
+          cursor: pointer;
+          box-shadow: -5px 3px 14px black;
+        }
         #github {
           background-image: url("images/GitHub.png");
           background-size: 63px 63px;
@@ -107,7 +173,7 @@ html {
     }
   }
   #about-me {
-
+    display: none;
     h2 {
       font-size: 70px;
     }
@@ -118,6 +184,7 @@ html {
     }
   }
   #portfolio {
+    display: none;
     h2 {
       font-size: 70px;
     }
@@ -161,6 +228,7 @@ html {
     }
   }
   #contact-info {
+    display: none;
     margin-bottom: 100px;
     h2 {
       font-size: 70px;
@@ -187,6 +255,12 @@ html {
 @media only screen and (max-width: 1024px) {
 
   html {
+    .arrow {
+      display: none;
+    }
+    .arrow-bottom {
+      display: none;
+    }
     .section {
       width: 700px;
       .center {
@@ -205,10 +279,17 @@ html {
         margin-left: 0;
           }
         }
+    #about-me {
+      display: block;
+    }
     #portfolio {
+      display: block;
       .showcase {
         margin: 50px 75px;
       }
+    }
+    #contact-info {
+      display: block;
     }
   }
 

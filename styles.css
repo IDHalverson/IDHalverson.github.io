@@ -11,6 +11,49 @@ html * {
 
 html {
   background: #00515C; }
+  html .active {
+    display: block !important; }
+  html .arrow {
+    position: fixed;
+    top: 300px;
+    width: 75px;
+    height: 75px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%; }
+    html .arrow img {
+      width: 65%;
+      position: absolute;
+      top: 17%; }
+  html .arrow:hover {
+    background: rgba(255, 255, 255, 0.6); }
+  html #arrow-left {
+    left: 30px; }
+    html #arrow-left img {
+      left: 11%; }
+  html #arrow-right {
+    right: 30px; }
+    html #arrow-right img {
+      right: 11%; }
+  html .arrow-bottom {
+    position: fixed;
+    width: 75px;
+    height: 75px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    top: 630px;
+    left: 45%; }
+    html .arrow-bottom img {
+      left: 17%;
+      width: 65%;
+      position: absolute; }
+  html .arrow-bottom:hover {
+    background: rgba(255, 255, 255, 0.6); }
+  html #arrow-scroll img {
+    top: 20%; }
+  html #arrow-conceal {
+    display: none; }
+    html #arrow-conceal img {
+      top: 13%; }
   html .section {
     box-shadow: -3px 1px 8px black;
     background: rgba(255, 255, 255, 0.25);
@@ -31,6 +74,7 @@ html {
       margin: 50px auto 50px auto;
       box-shadow: -1px 1px 12px #00515C; }
   html #main-title {
+    display: none;
     height: 500px;
     padding: 100px 0; }
     html #main-title #frame {
@@ -72,6 +116,11 @@ html {
           background: white;
           border-radius: 50%;
           box-shadow: -3px 1px 8px black; }
+        html #main-title #title-container #contact-links .contact-link:hover {
+          position: relative;
+          bottom: 7px;
+          cursor: pointer;
+          box-shadow: -5px 3px 14px black; }
         html #main-title #title-container #contact-links #github {
           background-image: url("images/GitHub.png");
           background-size: 63px 63px;
@@ -88,46 +137,51 @@ html {
           background-image: url("images/email.png");
           background-size: 62px 62px;
           background-position: center; }
-  html #about-me h2 {
-    font-size: 70px; }
-  html #about-me p {
-    font-size: 25px;
-    margin: 0 40px 40px 40px;
-    line-height: 40px; }
-  html #portfolio h2 {
-    font-size: 70px; }
-  html #portfolio .showcase {
-    float: left;
-    background: #00515C;
-    border: 3px solid #BDBBB6;
-    width: 444px;
-    height: 700px;
-    margin: 100px; }
-    html #portfolio .showcase h6 {
-      margin: 20px 10px 0 10px;
-      font-size: 30px;
-      word-spacing: normal;
-      text-shadow: -1px 1px 12px black; }
-    html #portfolio .showcase img {
-      width: 90%;
-      border: 2px solid #BDBBB6;
-      margin: 25px auto; }
-    html #portfolio .showcase .showcase-info {
-      width: 90%;
-      margin: 0 auto; }
-      html #portfolio .showcase .showcase-info button {
-        width: 80px;
-        height: 40px;
-        background: #ffffff;
-        background-color: #1FB244;
-        font-size: 18px;
-        margin-bottom: 20px; }
-      html #portfolio .showcase .showcase-info button:hover {
-        background-color: #1A9137; }
-      html #portfolio .showcase .showcase-info p {
-        word-spacing: 6px;
-        font-size: 24px; }
+  html #about-me {
+    display: none; }
+    html #about-me h2 {
+      font-size: 70px; }
+    html #about-me p {
+      font-size: 25px;
+      margin: 0 40px 40px 40px;
+      line-height: 40px; }
+  html #portfolio {
+    display: none; }
+    html #portfolio h2 {
+      font-size: 70px; }
+    html #portfolio .showcase {
+      float: left;
+      background: #00515C;
+      border: 3px solid #BDBBB6;
+      width: 444px;
+      height: 700px;
+      margin: 100px; }
+      html #portfolio .showcase h6 {
+        margin: 20px 10px 0 10px;
+        font-size: 30px;
+        word-spacing: normal;
+        text-shadow: -1px 1px 12px black; }
+      html #portfolio .showcase img {
+        width: 90%;
+        border: 2px solid #BDBBB6;
+        margin: 25px auto; }
+      html #portfolio .showcase .showcase-info {
+        width: 90%;
+        margin: 0 auto; }
+        html #portfolio .showcase .showcase-info button {
+          width: 80px;
+          height: 40px;
+          background: #ffffff;
+          background-color: #1FB244;
+          font-size: 18px;
+          margin-bottom: 20px; }
+        html #portfolio .showcase .showcase-info button:hover {
+          background-color: #1A9137; }
+        html #portfolio .showcase .showcase-info p {
+          word-spacing: 6px;
+          font-size: 24px; }
   html #contact-info {
+    display: none;
     margin-bottom: 100px; }
     html #contact-info h2 {
       font-size: 70px; }
@@ -144,6 +198,10 @@ html {
       margin: 40px 0; }
 
 @media only screen and (max-width: 1024px) {
+  html .arrow {
+    display: none; }
+  html .arrow-bottom {
+    display: none; }
   html .section {
     width: 700px; }
     html .section .center {
@@ -157,7 +215,13 @@ html {
     html #main-title #title-container {
       width: 700px;
       margin-left: 0; }
-  html #portfolio .showcase {
-    margin: 50px 75px; } }
+  html #about-me {
+    display: block; }
+  html #portfolio {
+    display: block; }
+    html #portfolio .showcase {
+      margin: 50px 75px; }
+  html #contact-info {
+    display: block; } }
 
 /*# sourceMappingURL=styles.css.map */
