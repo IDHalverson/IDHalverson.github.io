@@ -1,296 +1,103 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat');
-
-html * {
-  margin: 0;
-  padding: 0;
-  font-family: "Montserrat", Helvetica, sans-serif;
-  color: white;
-  letter-spacing: -1.3px;
-  word-spacing: 12px;
-  text-shadow: -1px 1px 12px #00515C;
-  -webkit-font-smoothing: antialiased;
-}
+@import url('https://fonts.googleapis.com/css?family=Khula|Raleway|Droid+Serif');
 
 html {
-  background: #00515C;
-  .active {
-    display: block !important;
+  background: black;
+  * {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: sans-serif;
   }
-  .arrow {
-    position: fixed;
-    top: 300px;
-    width: 75px;
-    height: 75px;
-    background: rgba(255, 255, 255, .2);
-    border-radius: 50%;
-    img {
-      width: 65%;
-      position: absolute;
-      top: 17%;
-    }
+  a,
+  a:hover,
+  a:visited,
+  a:link,
+  a:active {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
   }
-  .arrow:hover {
-    background: rgba(255, 255, 255, .6);
+  p {
+    text-indent: 30px;
   }
-  #arrow-left {
-    left: 30px;
-    img {
-      left: 11%;
-    }
+  * {
+    font-family: "Raleway";
+    font-size: 18px;
+    color: white;
   }
-  #arrow-right {
-    right: 30px;
-    img {
-      right: 11%;
-    }
-  }
-  .arrow-bottom {
-    position: fixed;
-    width: 75px;
-    height: 75px;
-    background: rgba(255, 255, 255, .2);
-    border-radius: 50%;
-    top: 630px;
-    left: 45%;
-    img {
-      left: 17%;
-      width: 65%;
-      position: absolute;
-    }
-  }
-  .arrow-bottom:hover {
-    background: rgba(255, 255, 255, .6);
-  }
-  #arrow-scroll {
-    img {
-      top: 20%;
-    }
-  }
-  #arrow-conceal {
-    display: none;
-    img {
-      top: 13%;
-    }
-  }
-  .section {
-    box-shadow: -3px 1px 8px black;
-    background: rgba(255, 255, 255, .25);
-    width: 1400px;
-    margin: 20px auto 0 auto;
-    overflow: hidden;
-    margin-bottom: 10px;
-    .center {
-      margin: 0 auto;
-      width: 1310px;
+  #main-container {
+    background: url("./images/plant.jpeg");
+    background-position: center;
+    background-size: cover;
+    height: 750px;
+    #nav {
       text-align: center;
-      padding: 40px;
-    }
-    .bar {
-      height: 6px;
-      width: 200px;
-      background: #BDBBB6;
-      border-radius: 4px;
-      margin: 50px auto 50px auto;
-      box-shadow: -1px 1px 12px #00515C;
-    }
-  }
-  #main-title {
-    display: none;
-    height: 500px;
-    padding: 100px 0;
-    #frame {
-      box-shadow: -1px 1px 4px black;
-      float: left;
-      margin: 100px 0 0 120px;
-      background: lightgrey;
-      width: 250px;
-      height: 250px;
-      border-radius: 50%;
-      padding: 10px;
-      border: 10px solid #A3A29D;
-      img {
-        width: 250px;
-        height: 250px;
+      background: rgba(0, 0, 0, .7);
+      #nav-header {
+        font-family: "Droid Serif";
+        font-size: 45px;
+        margin-top: 20px;
+        -webkit-transition: color .8s;
+        -moz-transition: color .8s;
+        -ms-transition: color .8s;
+        -o-transition: color .8s;
+        transition: color .8s;
       }
-    }
-    #title-container {
-      text-align: center;
-      height: 500px;
-      width: 900px;
-      margin: 0 0 0 400px;
-      h1 {
-        letter-spacing: -2px;
-        font-size: 80px;
-        margin: 20px 0;
+      #nav-header:hover {
+        color: orange;
       }
-      h2 {
-        letter-spacing: -2px;
-        font-size: 50px;
-        margin: 20px 0;
-      }
-      h3 {
+      #nav-subheader {
+        color: orange;
+        font-family: "Raleway";
         font-size: 25px;
+        margin-bottom: 20px;
       }
-      #contact-links {
-        margin: 50px auto;
-        width: 304px;
-        .contact-link {
-          margin: 0 8px;
-          float: left;
-          width: 60px;
-          height: 60px;
-          background: white;
-          border-radius: 50%;
-          box-shadow: -3px 1px 8px black;
-        }
-        .contact-link:hover {
-          position: relative;
-          bottom: 7px;
-          cursor: pointer;
-          box-shadow: -5px 3px 14px black;
-        }
-        #github {
-          background-image: url("images/GitHub.png");
-          background-size: 63px 63px;
-          background-position: center;
-        }
-        #linkedin {
-          background-image: url("images/LinkedIn.png");
-          background-size: 60px 60px;
-          background-position: center;
-        }
-        #twitter {
-          background-image: url("images/Twitter.png");
-          background-size: 53px 53px;
-          background-position: center;
-        }
-        #email {
-          background-image: url("images/email.png");
-          background-size: 62px 62px;
-          background-position: center;
+      .nav-link {
+        font-size: 18px;
+        -webkit-transition: text-shadow .5s;
+        -moz-transition: text-shadow .5s;
+        -ms-transition: text-shadow .5s;
+        -o-transition: text-shadow .5s;
+        transition: text-shadow .5s;
+        .active {
+          color: orange;
         }
       }
-    }
-  }
-  #about-me {
-    display: none;
-    h2 {
-      font-size: 70px;
-    }
-    p {
-      font-size: 25px;
-      margin: 0 40px 40px 40px;
-      line-height: 40px;
-    }
-  }
-  #portfolio {
-    display: none;
-    h2 {
-      font-size: 70px;
-    }
-    .showcase {
-      float: left;
-      background: #00515C;
-      border: 3px solid #BDBBB6;
-      width: 444px;
-      height: 700px;
-      margin: 100px;
-      h6 {
-        margin: 20px 10px 0 10px;
-        font-size: 30px;
-        word-spacing: normal;
-        text-shadow: -1px 1px 12px black;
+      .nav-link:hover {
+        text-shadow: 0 0 10px white;
       }
-      img {
-        width: 90%;
-        border: 2px solid #BDBBB6;
-        margin: 25px auto;
+      #nav-link-about {
       }
-      .showcase-info {
-        width: 90%;
-        margin: 0 auto;
-        button {
-          width: 80px;
-          height: 40px;
-          background: #ffffff;
-          background-color: #1FB244;
-          font-size: 18px;
+      #nav-link-portfolio {
+      }
+      #nav-link-blog {
+      }
+      #nav-link-contact {
+      }
+    }
+    .content-section {
+      .section-box {
+        background: rgba(0, 0, 0, .8);
+        padding: 70px;
+        margin-top: 50px;
+        .section-header {
+          color: orange;
+          font-family: "Droid Serif";
+          font-size: 30px;
           margin-bottom: 20px;
         }
-        button:hover {
-          background-color: #1A9137;
-        }
-        p {
-          word-spacing: 6px;
-          font-size: 24px;
-        }
       }
     }
-  }
-  #contact-info {
-    display: none;
-    margin-bottom: 100px;
-    h2 {
-      font-size: 70px;
-    }
-    a {
-      display: block;
-      font-size: 40px;
-      text-decoration: none;
-      margin: 20px 0 0 0;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    h6 {
-      font-weight: normal;
-      font-size: 40px;
-      margin: 40px 0;
-    }
-  }
-}
-
-
-
-@media only screen and (max-width: 1024px) {
-
-  html {
-    .arrow {
+    .hidden {
       display: none;
     }
-    .arrow-bottom {
-      display: none;
-    }
-    .section {
-      width: 700px;
-      .center {
-        width: 600px;
-      }
-    }
-    #main-title {
-      height: 800px;
-      padding: 50px 0;
-      #frame {
-        float: none;
-        margin: 0 auto;
-      }
-      #title-container {
-        width: 700px;
-        margin-left: 0;
-          }
-        }
-    #about-me {
-      display: block;
+    #about {
     }
     #portfolio {
-      display: block;
-      .showcase {
-        margin: 50px 75px;
-      }
     }
-    #contact-info {
-      display: block;
+    #blog {
+    }
+    #contact {
     }
   }
-
 }
