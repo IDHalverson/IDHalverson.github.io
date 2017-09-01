@@ -3,26 +3,32 @@ $(document).ready(function() {
 
   const contents = $(".content-section");
 
-  const q = {};
-  q.about = $(contents[0]);
-  q.portfolio = $(contents[1]);
-  q.blog = $(contents[2]);
-  q.contact = $(contents[3]);
+  const sections = ["about", "portfolio", "blog", "contact"];
 
-  const showSection = e => {
+  const content = {};
+  sections.forEach((section, idx) => {
+    content[section] = $(contents[idx]);
+  });
+
+  const nav = {};
+  sections.forEach((section, idx) => {
+    nav[section] = $(navs[idx]);
+  });
+
+  const showSection = section => {
     contents.addClass("hidden");
-    const section = $(e.target).attr("href");
-    q[section].removeClass("hidden");
+    content[section].removeClass("hidden");
   };
 
-  const colorActiveNav = e => {
-    contents.addClass("hidden");
-    const section = $(e.target).attr("href");
-    q[section].removeClass("hidden");
+  const colorActiveNav = section => {
+    navs.removeClass("active-nav");
+    nav[section].addClass("active-nav");
   };
 
   navs.on("click", e => {
     e.preventDefault();
-    showSection(e);
+    const section = $(e.target).attr("section");
+    showSection(section);
+    colorActiveNav(section);
   });
 });

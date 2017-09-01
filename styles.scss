@@ -6,7 +6,9 @@ html {
     margin: 0;
     padding: 0;
     border: 0;
-    font-family: sans-serif;
+    font-family: "Raleway", sans-serif;
+    font-size: 22px;
+    color: white;
   }
   a,
   a:hover,
@@ -17,19 +19,11 @@ html {
     color: white;
     cursor: pointer;
   }
-  p {
-    text-indent: 30px;
-  }
-  * {
-    font-family: "Raleway";
-    font-size: 18px;
-    color: white;
-  }
   #main-container {
     background: url("./images/plant.jpeg");
     background-position: center;
     background-size: cover;
-    height: 750px;
+    height: 850px;
     #nav {
       text-align: center;
       background: rgba(0, 0, 0, .7);
@@ -59,9 +53,17 @@ html {
         -ms-transition: text-shadow .5s;
         -o-transition: text-shadow .5s;
         transition: text-shadow .5s;
-        .active {
-          color: orange;
-        }
+      }
+      .active-nav {
+        -webkit-transition: all 1.5s;
+        -moz-transition: all 1.5s;
+        -ms-transition: all 1.5s;
+        -o-transition: all 1.5s;
+        transition: all 1.5s;
+        color: orange;
+      }
+      .active-nav:hover {
+        text-shadow: none !important;
       }
       .nav-link:hover {
         text-shadow: 0 0 10px white;
@@ -79,25 +81,79 @@ html {
       .section-box {
         background: rgba(0, 0, 0, .8);
         padding: 70px;
-        margin-top: 50px;
-        .section-header {
-          color: orange;
-          font-family: "Droid Serif";
-          font-size: 30px;
-          margin-bottom: 20px;
-        }
+        margin-top: 30px;
       }
     }
     .hidden {
       display: none;
     }
     #about {
+      .about-card {
+        margin-bottom: 30px;
+        .about-image {
+          height: 170px;
+          border-radius: 10%;
+          margin: 0 10px;
+        }
+        .about-text {
+        }
+      }
+      #about-card-1 {
+        .about-image {
+          float: left;
+        }
+        .about-text {
+        }
+      }
+      #about-card-2 {
+        .about-image {
+          float: right;
+        }
+        .about-text {
+        }
+      }
     }
     #portfolio {
     }
     #blog {
     }
     #contact {
+      .contact-info {
+        text-align: center;
+        margin: 20px;
+        font-size: 22px;
+      }
+      .method {
+        color: orange;
+      }
+      .contact-link-outer-div {
+        height: 100px;
+        background: rgba(255, 255, 255, .2);
+        .contact-link-div {
+          -webkit-transition: box-shadow .7s;
+          -moz-transition: box-shadow .7s;
+          -ms-transition: box-shadow .7s;
+          -o-transition: box-shadow .7s;
+          transition: box-shadow .7s;
+          background: white;
+          border-radius: 50%;
+          width: 60px;
+          height: 60px;
+          margin: 20px auto;
+          .contact-link {
+            width: 105%;
+            height: 105%;
+            margin-left: -2.5%;
+            margin-top: -2.5%;
+          }
+        }
+        .contact-link-div:hover {
+          box-shadow: 0 0 30px 0 white;
+        }
+      }
     }
   }
+}
+
+@media screen and (max-width: 700px) {
 }
