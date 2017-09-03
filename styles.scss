@@ -19,11 +19,17 @@ html {
     color: white;
     cursor: pointer;
   }
+  .colored {
+    color: orange;
+  }
   #main-container {
     background: url("./images/plant.jpeg");
-    background-position: center;
+    background-position: top;
     background-size: cover;
-    height: 850px;
+    height: 894px;
+    @media screen and (max-width: 800px) {
+      background: grey;
+    }
     #nav {
       text-align: center;
       background: rgba(0, 0, 0, .7);
@@ -81,7 +87,10 @@ html {
       .section-box {
         background: rgba(0, 0, 0, .8);
         padding: 70px;
-        margin-top: 30px;
+        margin: 30px 0;
+        @media screen and (max-width: 800px) {
+          padding: 10px;
+        }
       }
     }
     .hidden {
@@ -90,10 +99,18 @@ html {
     #about {
       .about-card {
         margin-bottom: 30px;
+        @media screen and (max-width: 800px) {
+          display: flex;
+          flex-flow: column nowrap;
+          text-align: center;
+        }
         .about-image {
           height: 170px;
           border-radius: 10%;
           margin: 0 10px;
+          @media screen and (max-width: 800px) {
+            margin: 10px auto;
+          }
         }
         .about-text {
         }
@@ -125,10 +142,16 @@ html {
       }
       .method {
         color: orange;
+        @media screen and (max-width: 800px) {
+          font-size: 18px;
+        }
       }
       .contact-link-outer-div {
         height: 100px;
         background: rgba(255, 255, 255, .2);
+        @media screen and (max-width: 800px) {
+          background: none;
+        }
         .contact-link-div {
           -webkit-transition: box-shadow .7s;
           -moz-transition: box-shadow .7s;
@@ -140,11 +163,18 @@ html {
           width: 60px;
           height: 60px;
           margin: 20px auto;
+          @media screen and (max-width: 800px) {
+            width: 25px;
+            height: 25px;
+          }
           .contact-link {
             width: 105%;
             height: 105%;
             margin-left: -2.5%;
             margin-top: -2.5%;
+            @media screen and (max-width: 800px) {
+              margin-top: -10px;
+            }
           }
         }
         .contact-link-div:hover {
@@ -153,7 +183,4 @@ html {
       }
     }
   }
-}
-
-@media screen and (max-width: 700px) {
 }

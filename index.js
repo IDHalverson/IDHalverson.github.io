@@ -5,13 +5,10 @@ $(document).ready(function() {
 
   const sections = ["about", "portfolio", "blog", "contact"];
 
+  const nav = {};
   const content = {};
   sections.forEach((section, idx) => {
     content[section] = $(contents[idx]);
-  });
-
-  const nav = {};
-  sections.forEach((section, idx) => {
     nav[section] = $(navs[idx]);
   });
 
@@ -26,7 +23,6 @@ $(document).ready(function() {
   };
 
   navs.on("click", e => {
-    e.preventDefault();
     const section = $(e.target).attr("section");
     showSection(section);
     colorActiveNav(section);

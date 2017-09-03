@@ -16,11 +16,16 @@ html {
     text-decoration: none;
     color: white;
     cursor: pointer; }
+  html .colored {
+    color: orange; }
   html #main-container {
     background: url("./images/plant.jpeg");
-    background-position: center;
+    background-position: top;
     background-size: cover;
-    height: 850px; }
+    height: 894px; }
+    @media screen and (max-width: 800px) {
+      html #main-container {
+        background: grey; } }
     html #main-container #nav {
       text-align: center;
       background: rgba(0, 0, 0, 0.7); }
@@ -61,15 +66,26 @@ html {
     html #main-container .content-section .section-box {
       background: rgba(0, 0, 0, 0.8);
       padding: 70px;
-      margin-top: 30px; }
+      margin: 30px 0; }
+      @media screen and (max-width: 800px) {
+        html #main-container .content-section .section-box {
+          padding: 10px; } }
     html #main-container .hidden {
       display: none; }
     html #main-container #about .about-card {
       margin-bottom: 30px; }
+      @media screen and (max-width: 800px) {
+        html #main-container #about .about-card {
+          display: flex;
+          flex-flow: column nowrap;
+          text-align: center; } }
       html #main-container #about .about-card .about-image {
         height: 170px;
         border-radius: 10%;
         margin: 0 10px; }
+        @media screen and (max-width: 800px) {
+          html #main-container #about .about-card .about-image {
+            margin: 10px auto; } }
     html #main-container #about #about-card-1 .about-image {
       float: left; }
     html #main-container #about #about-card-2 .about-image {
@@ -80,9 +96,15 @@ html {
       font-size: 22px; }
     html #main-container #contact .method {
       color: orange; }
+      @media screen and (max-width: 800px) {
+        html #main-container #contact .method {
+          font-size: 18px; } }
     html #main-container #contact .contact-link-outer-div {
       height: 100px;
       background: rgba(255, 255, 255, 0.2); }
+      @media screen and (max-width: 800px) {
+        html #main-container #contact .contact-link-outer-div {
+          background: none; } }
       html #main-container #contact .contact-link-outer-div .contact-link-div {
         -webkit-transition: box-shadow .7s;
         -moz-transition: box-shadow .7s;
@@ -94,11 +116,18 @@ html {
         width: 60px;
         height: 60px;
         margin: 20px auto; }
+        @media screen and (max-width: 800px) {
+          html #main-container #contact .contact-link-outer-div .contact-link-div {
+            width: 25px;
+            height: 25px; } }
         html #main-container #contact .contact-link-outer-div .contact-link-div .contact-link {
           width: 105%;
           height: 105%;
           margin-left: -2.5%;
           margin-top: -2.5%; }
+          @media screen and (max-width: 800px) {
+            html #main-container #contact .contact-link-outer-div .contact-link-div .contact-link {
+              margin-top: -10px; } }
       html #main-container #contact .contact-link-outer-div .contact-link-div:hover {
         box-shadow: 0 0 30px 0 white; }
 
