@@ -133,6 +133,32 @@ html {
     #portfolio {
     }
     #blog {
+      text-align: center;
+      p,
+      a {
+        font-size: 35px;
+        -webkit-transition: color .8s;
+        -moz-transition: color .8s;
+        -ms-transition: color .8s;
+        -o-transition: color .8s;
+        transition: color .8s;
+      }
+      a:hover {
+        color: orange;
+      }
+      #medium-logo {
+        background: white;
+        padding: 40px;
+        margin: 20px;
+        -webkit-transition: box-shadow .8s;
+        -moz-transition: box-shadow .8s;
+        -ms-transition: box-shadow .8s;
+        -o-transition: box-shadow .8s;
+        transition: box-shadow .8s;
+      }
+      #medium-logo:hover {
+        box-shadow: 0 0 30px orange;
+      }
     }
     #contact {
       .contact-info {

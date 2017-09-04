@@ -90,6 +90,29 @@ html {
       float: left; }
     html #main-container #about #about-card-2 .about-image {
       float: right; }
+    html #main-container #blog {
+      text-align: center; }
+      html #main-container #blog p,
+      html #main-container #blog a {
+        font-size: 35px;
+        -webkit-transition: color .8s;
+        -moz-transition: color .8s;
+        -ms-transition: color .8s;
+        -o-transition: color .8s;
+        transition: color .8s; }
+      html #main-container #blog a:hover {
+        color: orange; }
+      html #main-container #blog #medium-logo {
+        background: white;
+        padding: 40px;
+        margin: 20px;
+        -webkit-transition: box-shadow .8s;
+        -moz-transition: box-shadow .8s;
+        -ms-transition: box-shadow .8s;
+        -o-transition: box-shadow .8s;
+        transition: box-shadow .8s; }
+      html #main-container #blog #medium-logo:hover {
+        box-shadow: 0 0 30px orange; }
     html #main-container #contact .contact-info {
       text-align: center;
       margin: 20px;
