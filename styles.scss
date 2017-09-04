@@ -74,14 +74,6 @@ html {
       .nav-link:hover {
         text-shadow: 0 0 10px white;
       }
-      #nav-link-about {
-      }
-      #nav-link-portfolio {
-      }
-      #nav-link-blog {
-      }
-      #nav-link-contact {
-      }
     }
     .content-section {
       .section-box {
@@ -112,21 +104,15 @@ html {
             margin: 10px auto;
           }
         }
-        .about-text {
-        }
       }
       #about-card-1 {
         .about-image {
           float: left;
         }
-        .about-text {
-        }
       }
       #about-card-2 {
         .about-image {
           float: right;
-        }
-        .about-text {
         }
       }
     }
@@ -136,7 +122,7 @@ html {
       text-align: center;
       p,
       a {
-        font-size: 35px;
+        font-size: 30px;
         -webkit-transition: color .8s;
         -moz-transition: color .8s;
         -ms-transition: color .8s;
@@ -155,6 +141,10 @@ html {
         -ms-transition: box-shadow .8s;
         -o-transition: box-shadow .8s;
         transition: box-shadow .8s;
+        @media screen and (max-width: 800px) {
+          width: 300px;
+          padding: 27px;
+        }
       }
       #medium-logo:hover {
         box-shadow: 0 0 30px orange;

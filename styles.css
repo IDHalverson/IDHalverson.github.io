@@ -94,7 +94,7 @@ html {
       text-align: center; }
       html #main-container #blog p,
       html #main-container #blog a {
-        font-size: 35px;
+        font-size: 30px;
         -webkit-transition: color .8s;
         -moz-transition: color .8s;
         -ms-transition: color .8s;
@@ -111,6 +111,10 @@ html {
         -ms-transition: box-shadow .8s;
         -o-transition: box-shadow .8s;
         transition: box-shadow .8s; }
+        @media screen and (max-width: 800px) {
+          html #main-container #blog #medium-logo {
+            width: 300px;
+            padding: 27px; } }
       html #main-container #blog #medium-logo:hover {
         box-shadow: 0 0 30px orange; }
     html #main-container #contact .contact-info {
