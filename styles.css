@@ -25,6 +25,7 @@ html {
     height: 894px; }
     @media screen and (max-width: 800px) {
       html #main-container {
+        height: auto;
         background: grey; } }
     html #main-container #nav {
       text-align: center;

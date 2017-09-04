@@ -28,6 +28,7 @@ html {
     background-size: cover;
     height: 894px;
     @media screen and (max-width: 800px) {
+      height: auto;
       background: grey;
     }
     #nav {

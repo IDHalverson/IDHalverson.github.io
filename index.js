@@ -3,7 +3,7 @@ $(document).ready(function() {
 
   const contents = $(".content-section");
 
-  const sections = ["about", "portfolio", "blog", "contact"];
+  const sections = ["about", "projects", "blog", "contact"];
 
   const nav = {};
   const content = {};
