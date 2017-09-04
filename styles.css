@@ -79,7 +79,10 @@ html {
         html #main-container #about .about-card {
           display: flex;
           flex-flow: column nowrap;
-          text-align: center; } }
+          text-align: center; }
+          html #main-container #about .about-card p,
+          html #main-container #about .about-card span {
+            font-size: 16px; } }
       html #main-container #about .about-card .about-image {
         height: 170px;
         border-radius: 10%;
@@ -101,6 +104,9 @@ html {
         -ms-transition: color .8s;
         -o-transition: color .8s;
         transition: color .8s; }
+        html #main-container #blog p .small,
+        html #main-container #blog a .small {
+          font-size: 15px; }
       html #main-container #blog a:hover {
         color: orange; }
       html #main-container #blog #medium-logo {
@@ -114,7 +120,7 @@ html {
         transition: box-shadow .8s; }
         @media screen and (max-width: 800px) {
           html #main-container #blog #medium-logo {
-            width: 300px;
+            width: 200px;
             padding: 27px; } }
       html #main-container #blog #medium-logo:hover {
         box-shadow: 0 0 30px orange; }
