@@ -1,4 +1,6 @@
 $(document).ready(() => {
+  let projectsNavHasNotBeenClicked = true;
+
   const handleNavigation = () => {
     const navs = $(".nav-link");
     const contents = $(".content-section");
@@ -27,8 +29,6 @@ $(document).ready(() => {
       showSection(section);
       colorActiveNav(section);
     });
-
-    showSection("projects");
   };
 
   const handleProjectsCarousel = () => {
@@ -46,6 +46,9 @@ $(document).ready(() => {
     const photos = $(".pr-img");
     let currentSlide = 0;
     let autoChangeSlides = null;
+
+    if (!projectsNavHasNotBeenClicked) return;
+    projectsNavHasNotBeenClicked = false;
 
     // make eyeball icon follow scroll bar
     const handleViewpoint = ({ target }) => {
@@ -97,7 +100,7 @@ $(document).ready(() => {
 
     //note: changeSlides is curried function
 
-    autoChangeSlides = setInterval(changeSlides("right", false), 1800);
+    autoChangeSlides = setInterval(changeSlides("right", false), 2500);
 
     blinkingEye1 = setInterval(makeEyeBlink, 6000);
     blinkingEye2 = setTimeout(() => setInterval(makeEyeBlink, 6000), 300);
@@ -131,6 +134,6 @@ $(document).ready(() => {
 
   // do all the things
   handleNavigation();
-  handleProjectsCarousel();
   handlePhotoClicks();
+  $($(".nav-link")[1]).on("click", handleProjectsCarousel);
 });
