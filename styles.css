@@ -1,228 +1,339 @@
 @import url("https://fonts.googleapis.com/css?family=Khula|Raleway|Droid+Serif");
+@keyframes float {
+  from {
+    top: 5%; }
+  to {
+    top: 6%; } }
 html {
-  background: black;
-}
-html * {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-family: "Raleway", sans-serif;
-  font-size: 22px;
-  color: white;
-}
-html a,
-html a:hover,
-html a:visited,
-html a:link,
-html a:active {
-  text-decoration: none;
-  color: white;
-  cursor: pointer;
-}
-html .colored {
-  color: orange;
-}
-html #main-container {
-  background: url("https://s3.amazonaws.com/idhalversontestapps/plant.jpeg");
-  background-position: top;
-  background-size: cover;
-  height: 894px;
-}
-@media screen and (max-width: 800px) {
+  background: black; }
+  html * {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: "Raleway", sans-serif;
+    font-size: 22px;
+    color: white; }
+  html .disable-scrolling {
+    height: 100%;
+    overflow: hidden; }
+  html a,
+  html a:hover,
+  html a:visited,
+  html a:link,
+  html a:active {
+    text-decoration: none;
+    color: white;
+    cursor: pointer; }
+  html .colored {
+    color: orange !important; }
+  @media screen and (max-width: 800px) {
+    html .col-xs-10 {
+      width: 100%;
+      margin: 0; } }
   html #main-container {
-    height: auto;
-    background: grey;
-  }
-}
-html #main-container #nav {
-  text-align: center;
-  background: rgba(0, 0, 0, 0.7);
-}
-html #main-container #nav #nav-header {
-  font-family: "Droid Serif";
-  font-size: 45px;
-  margin-top: 20px;
-  -webkit-transition: color 0.8s;
-  -moz-transition: color 0.8s;
-  -ms-transition: color 0.8s;
-  -o-transition: color 0.8s;
-  transition: color 0.8s;
-}
-html #main-container #nav #nav-header:hover {
-  color: orange;
-}
-html #main-container #nav #nav-subheader {
-  color: orange;
-  font-family: "Raleway";
-  font-size: 25px;
-  margin-bottom: 20px;
-}
-html #main-container #nav .nav-link {
-  font-size: 18px;
-  -webkit-transition: text-shadow 0.5s;
-  -moz-transition: text-shadow 0.5s;
-  -ms-transition: text-shadow 0.5s;
-  -o-transition: text-shadow 0.5s;
-  transition: text-shadow 0.5s;
-}
-html #main-container #nav .active-nav {
-  -webkit-transition: all 1.5s;
-  -moz-transition: all 1.5s;
-  -ms-transition: all 1.5s;
-  -o-transition: all 1.5s;
-  transition: all 1.5s;
-  color: orange;
-}
-html #main-container #nav .active-nav:hover {
-  text-shadow: none !important;
-}
-html #main-container #nav .nav-link:hover {
-  text-shadow: 0 0 10px white;
-}
-html #main-container .content-section .section-box {
-  background: rgba(0, 0, 0, 0.8);
-  padding: 70px;
-  margin: 30px 0;
-}
-@media screen and (max-width: 800px) {
-  html #main-container .content-section .section-box {
-    padding: 10px;
-  }
-}
-html #main-container .hidden {
-  display: none;
-}
-html #main-container #about .about-card {
-  margin-bottom: 30px;
-}
-@media screen and (max-width: 800px) {
-  html #main-container #about .about-card {
-    display: flex;
-    flex-flow: column nowrap;
-    text-align: center;
-  }
-  html #main-container #about .about-card p,
-  html #main-container #about .about-card span {
-    font-size: 16px;
-  }
-}
-html #main-container #about .about-card .about-image {
-  height: 170px;
-  border-radius: 10%;
-  margin: 0 10px;
-}
-@media screen and (max-width: 800px) {
-  html #main-container #about .about-card .about-image {
-    margin: 10px auto;
-  }
-}
-html #main-container #about #about-card-1 .about-image {
-  float: left;
-}
-html #main-container #about #about-card-2 .about-image {
-  float: right;
-}
-html #main-container #blog {
-  text-align: center;
-}
-html #main-container #blog p,
-html #main-container #blog a {
-  font-size: 30px;
-  -webkit-transition: color 0.8s;
-  -moz-transition: color 0.8s;
-  -ms-transition: color 0.8s;
-  -o-transition: color 0.8s;
-  transition: color 0.8s;
-}
-html #main-container #blog p .small,
-html #main-container #blog a .small {
-  font-size: 15px;
-}
-html #main-container #blog a:hover {
-  color: orange;
-}
-html #main-container #blog #medium-logo {
-  background: white;
-  padding: 40px;
-  margin: 20px;
-  -webkit-transition: box-shadow 0.8s;
-  -moz-transition: box-shadow 0.8s;
-  -ms-transition: box-shadow 0.8s;
-  -o-transition: box-shadow 0.8s;
-  transition: box-shadow 0.8s;
-}
-@media screen and (max-width: 800px) {
-  html #main-container #blog #medium-logo {
-    width: 200px;
-    padding: 27px;
-  }
-}
-html #main-container #blog #medium-logo:hover {
-  box-shadow: 0 0 30px orange;
-}
-html #main-container #contact .contact-info {
-  text-align: center;
-  margin: 20px;
-  font-size: 22px;
-}
-html #main-container #contact .method {
-  color: orange;
-}
-@media screen and (max-width: 800px) {
-  html #main-container #contact .method {
-    font-size: 18px;
-  }
-}
-html #main-container #contact .contact-link-outer-div {
-  height: 100px;
-  background: rgba(255, 255, 255, 0.2);
-}
-@media screen and (max-width: 800px) {
-  html #main-container #contact .contact-link-outer-div {
-    background: none;
-  }
-}
-html #main-container #contact .contact-link-outer-div .contact-link-div {
-  -webkit-transition: box-shadow 0.7s;
-  -moz-transition: box-shadow 0.7s;
-  -ms-transition: box-shadow 0.7s;
-  -o-transition: box-shadow 0.7s;
-  transition: box-shadow 0.7s;
-  background: white;
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  margin: 20px auto;
-}
-@media screen and (max-width: 800px) {
-  html #main-container #contact .contact-link-outer-div .contact-link-div {
-    width: 25px;
-    height: 25px;
-  }
-}
-html
-  #main-container
-  #contact
-  .contact-link-outer-div
-  .contact-link-div
-  .contact-link {
-  width: 105%;
-  height: 105%;
-  margin-left: -2.5%;
-  margin-top: -2.5%;
-}
-@media screen and (max-width: 800px) {
-  html
-    #main-container
-    #contact
-    .contact-link-outer-div
-    .contact-link-div
-    .contact-link {
-    margin-top: -10px;
-  }
-}
-html #main-container #contact .contact-link-outer-div .contact-link-div:hover {
-  box-shadow: 0 0 30px 0 white;
-}
+    background: url("https://s3.amazonaws.com/idhalversontestapps/plant.jpeg");
+    background-position: top;
+    background-size: cover;
+    height: 894px; }
+    html #main-container #nav {
+      text-align: center;
+      background: rgba(0, 0, 0, 0.7); }
+      html #main-container #nav #nav-header {
+        font-family: "Droid Serif";
+        font-size: 45px;
+        margin-top: 20px;
+        -webkit-transition: color 0.5s;
+        -moz-transition: color 0.5s;
+        -ms-transition: color 0.5s;
+        -o-transition: color 0.5s;
+        transition: color 0.5s; }
+      html #main-container #nav #nav-header:hover {
+        color: orange; }
+      html #main-container #nav #nav-subheader {
+        color: orange;
+        font-family: "Raleway";
+        font-size: 25px;
+        margin-bottom: 20px; }
+      html #main-container #nav .nav-link {
+        font-size: 18px;
+        -webkit-transition: text-shadow 0.5s;
+        -moz-transition: text-shadow 0.5s;
+        -ms-transition: text-shadow 0.5s;
+        -o-transition: text-shadow 0.5s;
+        transition: text-shadow 0.5s; }
+      html #main-container #nav .active-nav {
+        -webkit-transition: all 1s;
+        -moz-transition: all 1s;
+        -ms-transition: all 1s;
+        -o-transition: all 1s;
+        transition: all 1s;
+        color: orange; }
+      html #main-container #nav .active-nav:hover {
+        text-shadow: none !important; }
+      html #main-container #nav .nav-link:hover {
+        text-shadow: 0 0 10px white; }
+    html #main-container .content-section .section-box {
+      background: rgba(0, 0, 0, 0.8);
+      padding: 70px;
+      margin: 30px 0; }
+      @media screen and (max-width: 800px) {
+        html #main-container .content-section .section-box {
+          padding: 10px; } }
+    html #main-container .hidden {
+      display: none; }
+    html #main-container #about .about-card {
+      margin-bottom: 30px; }
+      @media screen and (max-width: 800px) {
+        html #main-container #about .about-card {
+          display: flex;
+          flex-flow: column nowrap;
+          text-align: center; }
+          html #main-container #about .about-card p,
+          html #main-container #about .about-card span {
+            font-size: 16px; } }
+      html #main-container #about .about-card .about-image {
+        height: 170px;
+        border-radius: 10%;
+        margin: 0 10px; }
+        @media screen and (max-width: 800px) {
+          html #main-container #about .about-card .about-image {
+            margin: 10px auto; } }
+    @media screen and (max-width: 800px) {
+      html #main-container #about {
+        height: 600px;
+        overflow: scroll; } }
+    html #main-container #about #about-card-1 .about-image {
+      float: left; }
+    html #main-container #about #about-card-2 .about-image {
+      float: right; }
+    html #main-container #projects .carousel {
+      width: 100%;
+      height: 550px;
+      background: black;
+      border: 2px solid orange;
+      margin: 0 auto;
+      padding: 80px 50px 50px 50px; }
+      @media screen and (max-width: 800px) {
+        html #main-container #projects .carousel {
+          padding: 80px 0 0 0; } }
+      html #main-container #projects .carousel .carousel-slide {
+        display: none;
+        width: 100%;
+        height: 100%;
+        margin: auto;
+        background: black;
+        overflow: scroll;
+        border: 3px solid orange; }
+        html #main-container #projects .carousel .carousel-slide .carousel-content {
+          max-height: 100%;
+          max-width: 100%;
+          display: flex;
+          flex-flow: column nowrap;
+          align-items: center; }
+          html #main-container #projects .carousel .carousel-slide .carousel-content .slide-header {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 10px;
+            position: absolute;
+            top: 0;
+            text-align: center; }
+            html #main-container #projects .carousel .carousel-slide .carousel-content .slide-header .carousel-link {
+              -webkit-transition: text-shadow 0.5s;
+              -moz-transition: text-shadow 0.5s;
+              -ms-transition: text-shadow 0.5s;
+              -o-transition: text-shadow 0.5s;
+              transition: text-shadow 0.5s; }
+            html #main-container #projects .carousel .carousel-slide .carousel-content .slide-header .carousel-link:hover {
+              text-shadow: 0 0 10px orange; }
+          html #main-container #projects .carousel .carousel-slide .carousel-content .pr-img .description {
+            font-size: 14px;
+            display: none;
+            color: white;
+            position: absolute;
+            top: 11%;
+            right: 10%;
+            -webkit-transition: color 0.5s;
+            -moz-transition: color 0.5s;
+            -ms-transition: color 0.5s;
+            -o-transition: color 0.5s;
+            transition: color 0.5s; }
+          html #main-container #projects .carousel .carousel-slide .carousel-content .pr-img .show-description {
+            display: block; }
+            @media screen and (max-width: 800px) {
+              html #main-container #projects .carousel .carousel-slide .carousel-content .pr-img .show-description {
+                display: none; } }
+          html #main-container #projects .carousel .carousel-slide .carousel-content .pr-img img {
+            max-height: 100%;
+            max-width: 100%;
+            margin-bottom: 20px; }
+          html #main-container #projects .carousel .carousel-slide .carousel-content .buffer-img {
+            height: 1000px;
+            background: black;
+            width: 100%; }
+        html #main-container #projects .carousel .carousel-slide .viewpoint {
+          color: white;
+          position: absolute;
+          right: 2.5%;
+          top: 0;
+          margin-top: 80px;
+          -webkit-transition: top 0.5s;
+          -moz-transition: top 0.5s;
+          -ms-transition: top 0.5s;
+          -o-transition: top 0.5s;
+          transition: top 0.5s; }
+          @media screen and (max-width: 800px) {
+            html #main-container #projects .carousel .carousel-slide .viewpoint {
+              margin-top: 85px;
+              right: 3.5%;
+              color: black;
+              background: white;
+              border-radius: 50%; } }
+        html #main-container #projects .carousel .carousel-slide .viewpoint-percentage {
+          font-size: 10px;
+          top: -8px;
+          color: white;
+          position: absolute;
+          right: 2.5%;
+          top: 0;
+          margin-top: 80px;
+          -webkit-transition: top 0.5s;
+          -moz-transition: top 0.5s;
+          -ms-transition: top 0.5s;
+          -o-transition: top 0.5s;
+          transition: top 0.5s; }
+          @media screen and (max-width: 800px) {
+            html #main-container #projects .carousel .carousel-slide .viewpoint-percentage {
+              right: 3.5%;
+              color: black;
+              background: white;
+              border-radius: 50%; } }
+      html #main-container #projects .carousel .carousel-active {
+        display: block; }
+      html #main-container #projects .carousel .carousel-buttons {
+        position: relative;
+        height: 15%;
+        width: 35%;
+        top: -25%;
+        margin: 0 auto;
+        background: rgba(0, 0, 0, 0.6); }
+        @media screen and (max-width: 800px) {
+          html #main-container #projects .carousel .carousel-buttons {
+            height: 10%;
+            width: 60%; } }
+        html #main-container #projects .carousel .carousel-buttons .carousel-button {
+          width: 45%;
+          height: 90%;
+          margin: 1%;
+          display: flex;
+          flex-flow: row nowrap;
+          align-items: center;
+          cursor: pointer; }
+          html #main-container #projects .carousel .carousel-buttons .carousel-button span {
+            font-size: 60px;
+            margin: 0 auto;
+            color: white; }
+            @media screen and (max-width: 800px) {
+              html #main-container #projects .carousel .carousel-buttons .carousel-button span {
+                font-size: 40px; } }
+          @media screen and (max-width: 800px) {
+            html #main-container #projects .carousel .carousel-buttons .carousel-button {
+              background: rgba(255, 255, 255, 0.1); } }
+        html #main-container #projects .carousel .carousel-buttons .carousel-button:hover {
+          background: rgba(255, 255, 255, 0.1); }
+        html #main-container #projects .carousel .carousel-buttons .carousel-left {
+          float: left; }
+        html #main-container #projects .carousel .carousel-buttons .carousel-right {
+          float: right; }
+      @media screen and (min-width: 800px) {
+        html #main-container #projects .carousel .subtle {
+          background: rgba(0, 0, 0, 0.1); }
+          html #main-container #projects .carousel .subtle .carousel-button span {
+            color: rgba(255, 255, 255, 0.4); } }
+      html #main-container #projects .carousel .scrollable-tooltip {
+        position: absolute;
+        top: 5%;
+        animation-name: float;
+        animation-duration: 0.7s;
+        animation-direction: alternate-reverse;
+        animation-iteration-count: infinite; }
+        @media screen and (max-width: 800px) {
+          html #main-container #projects .carousel .scrollable-tooltip span {
+            font-size: 10px; } }
+    html #main-container #blog {
+      text-align: center; }
+      html #main-container #blog p,
+      html #main-container #blog a {
+        font-size: 30px;
+        -webkit-transition: color 0.5s;
+        -moz-transition: color 0.5s;
+        -ms-transition: color 0.5s;
+        -o-transition: color 0.5s;
+        transition: color 0.5s; }
+        html #main-container #blog p .small,
+        html #main-container #blog a .small {
+          font-size: 15px; }
+      html #main-container #blog a:hover {
+        color: orange; }
+      html #main-container #blog #medium-logo {
+        background: white;
+        padding: 40px;
+        margin: 20px;
+        -webkit-transition: box-shadow 0.5s;
+        -moz-transition: box-shadow 0.5s;
+        -ms-transition: box-shadow 0.5s;
+        -o-transition: box-shadow 0.5s;
+        transition: box-shadow 0.5s; }
+        @media screen and (max-width: 800px) {
+          html #main-container #blog #medium-logo {
+            width: 200px;
+            padding: 27px; } }
+      html #main-container #blog #medium-logo:hover {
+        box-shadow: 0 0 30px orange; }
+    html #main-container #contact .contact-info {
+      text-align: center;
+      margin: 20px;
+      font-size: 22px; }
+    html #main-container #contact .method {
+      color: orange;
+      -webkit-transition: text-shadow 0.5s;
+      -moz-transition: text-shadow 0.5s;
+      -ms-transition: text-shadow 0.5s;
+      -o-transition: text-shadow 0.5s;
+      transition: text-shadow 0.5s; }
+      @media screen and (max-width: 800px) {
+        html #main-container #contact .method {
+          font-size: 18px; } }
+    html #main-container #contact .method:hover {
+      text-shadow: 0 0 10px orange; }
+    html #main-container #contact .contact-link-outer-div {
+      height: 100px;
+      background: rgba(255, 255, 255, 0.2); }
+      @media screen and (max-width: 800px) {
+        html #main-container #contact .contact-link-outer-div {
+          background: none; } }
+      html #main-container #contact .contact-link-outer-div .contact-link-div {
+        -webkit-transition: box-shadow 0.5s;
+        -moz-transition: box-shadow 0.5s;
+        -ms-transition: box-shadow 0.5s;
+        -o-transition: box-shadow 0.5s;
+        transition: box-shadow 0.5s;
+        background: white;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        margin: 20px auto; }
+        @media screen and (max-width: 800px) {
+          html #main-container #contact .contact-link-outer-div .contact-link-div {
+            width: 25px;
+            height: 25px; } }
+        html #main-container #contact .contact-link-outer-div .contact-link-div .contact-link {
+          width: 105%;
+          height: 105%;
+          margin-left: -2.5%;
+          margin-top: -2.5%; }
+          @media screen and (max-width: 800px) {
+            html #main-container #contact .contact-link-outer-div .contact-link-div .contact-link {
+              margin-top: -10px; } }
+      html #main-container #contact .contact-link-outer-div .contact-link-div:hover {
+        box-shadow: 0 0 30px 0 white; }
 
 /*# sourceMappingURL=styles.css.map */
