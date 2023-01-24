@@ -14,20 +14,23 @@ $(document).ready(() => {
       nav[section] = $(navs[idx]);
     });
 
-    const showSection = section => {
+    const showSection = (section) => {
       contents.addClass("hidden");
       content[section].removeClass("hidden");
     };
 
-    const colorActiveNav = section => {
+    const colorActiveNav = (section) => {
       navs.removeClass("active-nav");
       nav[section].addClass("active-nav");
     };
     // utilize dynamic objects so we only have 1 listener assignment
-    navs.on("click", e => {
+    navs.on("click", (e) => {
       const section = $(e.target).attr("section");
       showSection(section);
       colorActiveNav(section);
+      if (section === "projects") {
+        window.alert("This portfolio needs updating - please be patient :)");
+      }
     });
   };
 
@@ -54,12 +57,12 @@ $(document).ready(() => {
     const handleViewpoint = ({ target }) => {
       const slide = $(target);
       const percent = Math.round(
-        slide.scrollTop() / (target.scrollHeight - slide.height()) * 73
+        (slide.scrollTop() / (target.scrollHeight - slide.height())) * 73
       );
 
       viewpoint.css("top", `${percent}%`);
       percentage.css("top", `${percent - 1.5}%`);
-      percentage.html(`${Math.round(percent / 73 * 100)}%`);
+      percentage.html(`${Math.round((percent / 73) * 100)}%`);
     };
 
     // incr+ or decr- active slide based on direction
@@ -86,13 +89,13 @@ $(document).ready(() => {
       }, 100);
     };
 
-    const toggleShowDescription = hide => ({ target }) => {
-      photos.children().removeClass("show-description");
-      if (hide) return;
-      $(target)
-        .prev()
-        .addClass("show-description");
-    };
+    const toggleShowDescription =
+      (hide) =>
+      ({ target }) => {
+        photos.children().removeClass("show-description");
+        if (hide) return;
+        $(target).prev().addClass("show-description");
+      };
 
     const toggleCarouselControls = () => carouselButtons.toggleClass("subtle");
 
@@ -111,18 +114,18 @@ $(document).ready(() => {
     carousel.on("mouseenter", stopAutoChanging);
     carouselSlides.on({
       mouseenter: toggleDisableBodyScroll,
-      mouseleave: toggleDisableBodyScroll
+      mouseleave: toggleDisableBodyScroll,
     });
     carouselSlides.scroll(stopAutoChanging);
     carouselSlides.scroll(() => $(".scrollable-tooltip").fadeOut());
     carouselButtons.on({
       mouseenter: toggleCarouselControls,
-      mouseleave: toggleCarouselControls
+      mouseleave: toggleCarouselControls,
     });
     carouselSlides.scroll(handleViewpoint);
     photos.on({
       mouseenter: toggleShowDescription(false),
-      mouseleave: toggleShowDescription(true)
+      mouseleave: toggleShowDescription(true),
     });
   };
 
